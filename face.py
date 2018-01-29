@@ -91,3 +91,22 @@ fd(140)
 left(90)
 color('red', 'black')
 circle(150)
+
+# make left ear
+right(90)
+circle(25, 200)
+
+right(90)
+color('red', 'black')
+circle(150, 30)
+
+pensize(15)
+color('black', 'black')
+circle(150, 80)
+
+pensize(0)
+color('red', 'black')
+circle(150, 30)
+
+right(90)
+circle(25, 200)
