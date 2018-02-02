@@ -44,9 +44,48 @@ circle(105, 180)
 
 penup()
 left(90)
-forward(465)
+forward(210)
 
-color('gray', 'black')
 pendown()
+forward(43)
+left(270)
+circle(105, -180)
+
+right(90)
+forward(40)
 left(90)
-circle(105, 180)
+forward(150)
+
+left(90)
+forward(250)
+right(80)
+forward(100)
+
+left(80)
+forward(150)
+
+left(80)
+forward(100)
+
+left(100)
+forward(190)
+
+left(180)
+forward(100)
+
+right(90)
+forward(100 * 0.984)
+
+right(180)
+forward(100 * 0.984)
+
+right(90)
+forward(200)
+
+left(90)
+forward(150)
+
+left(90)
+forward(40)
+
+
