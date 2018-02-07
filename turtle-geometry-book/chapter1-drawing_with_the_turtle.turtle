@@ -1,0 +1,41 @@
+; Turtle Geometry
+; Chapter 1
+; 1.1.2 Drawing with the Turtle
+;
+; Abhishek Mishra
+; Date: 7th Feb 2018
+
+;incorrect triangle
+
+(define (try.angle size)
+    (dotimes (x 3)
+             (forward size)
+             (right 60)))
+
+(try.angle 150)
+
+(home)
+
+(pencolor "red")
+
+(define (triangle size)
+    (dotimes (x 3)
+             (forward size)
+             (right 120)))
+
+(triangle 150)
+
+(load "../turtle-programs/turtle-geometry-book/chapter1-procedures.turtle")
+
+(clear)
+
+(define (house side)
+    (square side)
+    (forward side)
+    (right 30)
+    (triangle side))
+
+(left 90)
+(house 200)
+
+(home)
