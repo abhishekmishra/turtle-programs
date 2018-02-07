@@ -1,0 +1,55 @@
+; Turtle Geometry
+; Chapter 1
+; drawings made with a simple doodle
+;
+; Abhishek Mishra
+; Date: 7th Feb 2018
+
+(define (thing)
+    (forward 100)
+    (right 90)
+    (forward 100)
+    (right 90)
+    (forward 50)
+    (right 90)
+    (forward 50)
+    (right 90)
+    (forward 100)
+    (right 90)
+    (forward 25)
+    (right 90)
+    (forward 25)
+    (right 90)
+    (forward 50))
+
+(left 90)
+(thing)
+
+(home)
+(clear)
+
+(define (thing1)
+    (dotimes (x 4)
+             (thing)))
+(thing1)
+
+(home)
+(clear)
+
+(define (thing2)
+    (dotimes (x 20)
+             (thing)
+             (right 10)
+             (forward 50)))
+         
+(thing2)
+
+(home)
+(clear)
+
+(define (thing3)
+    (dotimes (x 20)
+             (thing)
+             (left 45)
+             (forward 100)))
+(thing3)
