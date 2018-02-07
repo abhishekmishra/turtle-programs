@@ -1,0 +1,60 @@
+; Turtle Geometry
+; Chapter 1
+; arcs, left and right
+;
+; Abhishek Mishra
+; Date: 7th Feb 2018
+
+(define (arcr r deg)
+    (dotimes (x deg)
+             (forward r)
+             (right 1)))
+         
+(define (arcl r deg)
+    (dotimes (x deg)
+             (forward r)
+             (left 1)))
+         
+(arcr 1 360)
+
+(home)
+(clear)
+
+(define (circles)
+    (dotimes (x 9)
+             (arcr 1 360)
+             (right 40)))
+         
+(circles)
+
+(home)
+(clear)
+
+(define (petal size)
+    (arcr size 60)
+    (right 120)
+    (arcr size 60)
+    (right 120))
+
+(define (flower size)
+    (dotimes (x 6)
+             (petal size)
+             (right 60)))
+
+(flower 5)
+
+(home)
+(clear)
+
+(pencolor "orange")
+(define (ray r)
+    (dotimes (x 2)
+             (arcl r 90)
+             (arcr r 90)))
+         
+(define (sun size)
+    (dotimes (x 9)
+             (ray size)
+             (right 160)))
+         
+(sun 1)
