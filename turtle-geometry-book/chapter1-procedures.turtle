@@ -1,0 +1,45 @@
+; Turtle Geometry
+; Chapter 1
+; initial procedures
+;
+; Date: 7th Feb 2018
+
+(define (square)
+    (dotimes (x 4)
+             (begin
+                 (forward 100)
+                 (right 90))))
+(square)
+
+; a square procedure that
+; takes size 
+(define (square size)
+    (dotimes (x 4)
+             (begin
+                 (forward size)
+                 (right 90))))
+(square 200)
+
+; since forward followed by right
+; might be useful in other places
+; we can create squarepiece
+
+(define (squarepiece size)
+    (forward size)
+    (right 90))
+
+; now redefine square
+(define (square size)
+    (dotimes (x 4)
+             (squarepiece size)))
+
+(square 300)
+
+; rectangle using squarepiece
+(define (rectangle side1 side2)
+    (dotimes (x 2)
+             (squarepiece side1)
+             (squarepiece side2)))
+         
+(rectangle 150 50)
+
