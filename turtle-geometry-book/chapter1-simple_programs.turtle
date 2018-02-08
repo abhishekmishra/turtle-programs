@@ -1,0 +1,69 @@
+; Turtle Geometry
+; Chapter 1
+; 1.1.4 some simple turtle programs
+;
+; Abhishek Mishra
+; Date: 7th Feb 2018
+
+(define (circle2)
+    (dotimes (x 360)
+             (forward 2)
+             (right 1)))
+
+(left 90)
+
+(circle2)
+
+(home)
+(clear)
+
+; some simple geometric figures
+(define (poly side angle)
+    (dotimes (x 10000) ; repeat forever
+             (forward side)
+             (right angle)))
+
+;pentagon
+(poly 100 72)
+
+(penup)
+(forward 200)
+(pendown)
+
+;star
+(poly 50 144)
+
+(penup)
+(left 90)
+(forward 200)
+(pendown)
+
+;circle
+(poly 2 1)
+
+(penup)
+(home)
+(left 90)
+(forward 200)
+(pendown)
+
+;hexagon
+(poly 50 60)
+
+(penup)
+(home)
+(left 135)
+(forward 200)
+(pendown)
+
+;eight point star
+(poly 100 135)
+
+(penup)
+(home)
+(left 180)
+(forward 200)
+(pendown)
+
+;10 point star
+(poly 100 108)
