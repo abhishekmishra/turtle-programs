@@ -90,5 +90,17 @@
     (lambda (incr-colour) 
         (barline (canvas-colour (incr-colour)) 50 2)))
 
+(do-with-colour-interpolation 
+    (make-colour 0 255 0)
+    (lambda (c) 
+        (make-colour
+            (+ (get-r c) 10)
+            (get-g c)
+            (get-b c)))
+    30
+    (lambda (incr-colour) 
+        (pencolor (canvas-colour (incr-colour)))
+        (circle)
+        (right 5)))
 ;(barline "red" 150 5)
 ;(barline "red" 150 5)
