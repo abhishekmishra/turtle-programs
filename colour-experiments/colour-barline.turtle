@@ -1,0 +1,52 @@
+; Some experiments with colors
+; Date: 11/02/2018
+; Abhishek Mishra
+
+(load "../turtle-programs/colour-experiments/colour-utils.scm")
+
+
+(define (barline color length incr)
+    (pencolor color)
+    (forward length)
+    (penup)
+    (backward length)
+    (right 90)
+    (forward incr)
+    (left 90)
+    (pendown))
+
+(define (incr-rgb start incr)
+    (make-colour (+ incr (get-r start))
+                 (+ incr (get-g start))
+                 (+ incr (get-b start))))
+
+(define (interpolate-colour start incr)
+    (let ((c start))
+         (list 
+               (lambda ()
+                   (set! c (incr c))
+                   c)
+               (lambda ()
+                   c))))
+;(console-log (interpolate-colour c 10))
+
+(define c (make-colour 10 10 10))
+(console-log c)
+(define d (incr-rgb c 10))
+(console-log d)
+
+(penup)
+(backward 200)
+(left 90)
+(pendown)
+
+(let* ((ic (interpolate-colour c
+                               (lambda (c)
+                                      (incr-rgb c 1))))
+                (incr-colour (car ic))
+                (get-colour (cadr ic)))
+    (dotimes (x 200)
+        (barline (canvas-colour (incr-colour)) 150 5))
+
+;(barline "red" 150 5)
+;(barline "red" 150 5)
