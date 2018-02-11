@@ -30,23 +30,65 @@
                    c))))
 ;(console-log (interpolate-colour c 10))
 
-(define c (make-colour 10 10 10))
-(console-log c)
+(define c (make-colour 0 0 0))
+;(console-log c)
 (define d (incr-rgb c 10))
-(console-log d)
+;(console-log d)
 
 (penup)
-(backward 200)
+(backward 400)
 (left 90)
 (pendown)
 
-(let* ((ic (interpolate-colour c
-                               (lambda (c)
-                                      (incr-rgb c 1))))
-                (incr-colour (car ic))
-                (get-colour (cadr ic)))
-    (dotimes (x 200)
-        (barline (canvas-colour (incr-colour)) 150 5))
+(define (do-with-colour-interpolation 
+            c 
+            incr-colour-fn
+            num-times
+            do-what)
+    (let* ((ic (interpolate-colour c incr-colour-fn))
+                    (incr-colour (car ic))
+                    (get-colour (cadr ic)))
+        (dotimes (x num-times)
+            (do-what incr-colour))))
+
+(do-with-colour-interpolation 
+    c
+    (lambda (c) (incr-rgb c 1))
+    300
+    (lambda (incr-colour) 
+        (barline (canvas-colour (incr-colour)) 50 2)))
+
+(penup)
+(backward 70)
+(right 90)
+(backward 600)
+(left 90)
+(pendown)
+
+(do-with-colour-interpolation 
+    (make-colour 255 0 0)
+    (lambda (c) (incr-rgb c 1))
+    300
+    (lambda (incr-colour) 
+        (barline (canvas-colour (incr-colour)) 50 2)))
+
+(penup)
+(backward 70)
+(right 90)
+(backward 600)
+(left 90)
+(pendown)
+
+(do-with-colour-interpolation 
+    (make-colour 0 255 0)
+    (lambda (c) 
+        (make-colour
+            (+ (get-r c) 1)
+            (get-g c)
+            (get-b c)))
+    300
+    (lambda (incr-colour) 
+        (barline (canvas-colour (incr-colour)) 50 2)))
 
 ;(barline "red" 150 5)
 ;(barline "red" 150 5)

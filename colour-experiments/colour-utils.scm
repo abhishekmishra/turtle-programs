@@ -32,11 +32,11 @@
 
 (define c (make-colour-a 10 20 80 0.2))
 
-(console-log c)
+;(console-log c)
 
-(console-log (get-r c))
-(console-log (get-g c))
-(console-log (get-b c))
-(console-log (get-a c))
+;(console-log (get-r c))
+;(console-log (get-g c))
+;(console-log (get-b c))
+;(console-log (get-a c))
 
-(console-log (canvas-colour c))
+;(console-log (canvas-colour c))
