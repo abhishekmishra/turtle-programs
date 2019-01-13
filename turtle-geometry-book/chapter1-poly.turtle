@@ -1,0 +1,11 @@
+kturtle-script-v1.0
+@(reset)
+
+@(learn) poly $side@(,) $angle {
+  @(repeat) 10 {
+    @(forward) $side
+    @(turnleft) $angle
+  }
+}
+
+poly 100@(,) 108

@@ -1,0 +1,10 @@
+kturtle-script-v1.0
+@(reset)
+
+@(learn) polyspi $side@(,) $angle {
+  @(forward) $side
+  @(turnright) $angle
+  polyspi $side+2@(,) $angle
+}
+
+polyspi 10@(,) 90

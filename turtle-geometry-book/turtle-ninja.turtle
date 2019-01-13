@@ -1,0 +1,14 @@
+kturtle-script-v1.0
+@(reset) 
+
+@(learn) newpoly $side@(,) $angle {
+  @(repeat) 100 {
+    @(forward) $side
+    @(turnright) $angle
+    @(forward) $side
+    @(turnright) 2*$angle
+  }
+}
+
+# Sunny's turtle ninja star
+newpoly 120@(,) 1000
