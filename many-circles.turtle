@@ -1,0 +1,18 @@
+;Empty file
+(define (many-circles)
+    (define (mc n)
+        (if (> n 0)
+            (begin
+                (circle)
+                (left 10)
+                (mc (- n 1)))))
+    (mc 40))
+
+(pencolor "red")
+(many-circles)
+
+(penup)
+(forward 300)
+(pendown)
+(pencolor "blue")
+(many-circles)
