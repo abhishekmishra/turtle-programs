@@ -1,3 +1,4 @@
+# pylint: disable=unused-wildcard-import, undefined-variable
 from turtle import *
 
 penup()
@@ -88,4 +89,4 @@ forward(150)
 left(90)
 forward(40)
 
-
+done()
