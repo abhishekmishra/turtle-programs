@@ -15,9 +15,9 @@ def spiral(distance, angle, pwidth, distance_inc, angle_inc, pwidth_inc):
         a += angle_inc
         pw += pwidth_inc
 
-pencolour(128, 128, 0)
+pencolour(255, 128, 0)
 pendown()
-spiral(1, 45, 1, 1, 0, 0.1)
+spiral(1, 30, 1, 1, 0, 0.1)
 
 ### Your code ends here ###
 
