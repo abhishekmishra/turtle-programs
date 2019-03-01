@@ -1,6 +1,8 @@
 # pylint: disable=unused-wildcard-import, undefined-variable
 from turtle import *
 
+speed('fastest')
+
 penup()
 forward(100)
 
