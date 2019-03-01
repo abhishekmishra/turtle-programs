@@ -4,16 +4,16 @@ create_turtle()
 ### Your code goes here ###
 
 def tree(size):
-    if size < 16:
+    if size < 4:
         forward(size)
         forward(-size)
         return
     
     forward(size/4)
 
-    left(40)
+    left(60)
     tree(size/2)
-    right(40)
+    right(60)
 
     forward(size/4)
 
@@ -37,7 +37,7 @@ def tree(size):
 
 forward(-200)
 pendown()
-pencolour(0, 128, 0)
+pencolour(165, 42, 42)
 tree(128)
 
 ### Your code ends here ###
