@@ -4,40 +4,40 @@ let main = async () => {
     await create_turtle();
     /* Your code goes here */
 
-    function draw_sierpinski(length, depth) {
+    async function draw_sierpinski(length, depth) {
         if(depth == 0) {
-            pendown();
+            await pendown();
             for(var i = 0; i < 3; i++) {
-                forward(length);
-                left(120);
+                await forward(length);
+                await left(120);
             }
-            penup();
+            await penup();
         }
         else {
             let half = length/2.0;
-            draw_sierpinski(half, depth - 1);
-            forward(half);
-            draw_sierpinski(half, depth - 1);
-            forward(-half);
-            left(60);
-            forward(half);
-            right(60);
-            draw_sierpinski(half, depth - 1);
-            left(60);
-            forward(-half);
-            right(60);
+            await draw_sierpinski(half, depth - 1);
+            await forward(half);
+            await draw_sierpinski(half, depth - 1);
+            await forward(-half);
+            await left(60);
+            await forward(half);
+            await right(60);
+            await draw_sierpinski(half, depth - 1);
+            await left(60);
+            await forward(-half);
+            await right(60);
         }
     }
 
-    left(90);
-    forward(200);
-    right(90);
-    forward(-200);
-    pencolour(255, 69, 0);
-    penwidth(2);
-    pendown();
-    right(90);
-    draw_sierpinski(400, 5);
+    await left(90);
+    await forward(200);
+    await right(90);
+    await forward(-200);
+    await pencolour(255, 69, 0);
+    await penwidth(2);
+    await pendown();
+    await right(90);
+    await draw_sierpinski(400, 5);
 
     /* Your code ends here */
 
