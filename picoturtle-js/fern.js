@@ -5,7 +5,7 @@ let main = async () => {
     /* Your code goes here */
 
     async function fern(size, sign) {
-        if (size < 2) {
+        if (size < 1) {
             return;
         }
         await forward(size);
@@ -32,7 +32,7 @@ let main = async () => {
     await penup();
     await forward(-150);
     await pendown();
-    await fern(20, 1);
+    await fern(25, 1);
 
     /* Your code ends here */
 
