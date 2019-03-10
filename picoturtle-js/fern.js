@@ -1,4 +1,4 @@
-const { create_turtle, penup, pendown, penwidth, clear, stop, pencolour, forward, right, left, print } = require('@picoturtle/picoturtle-nodejs-client');
+const { create_turtle, penup, pendown, penwidth, clear, stop, pencolour, forward, back, font, filltext, stroketext, right, left, print } = require('@picoturtle/picoturtle-nodejs-client');
 
 let main = async () => {
     await create_turtle();
@@ -30,9 +30,9 @@ let main = async () => {
 
     await pencolour(0, 128, 0);
     await penup();
-    await forward(-150);
+    await back(200);
     await pendown();
-    await fern(25, 1);
+    await fern(30, 1);
 
     /* Your code ends here */
 
