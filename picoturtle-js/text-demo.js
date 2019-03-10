@@ -8,13 +8,19 @@ let main = async () => {
     await right(90);
     await forward(200);
     await left(90);
-    await pencolour(255, 128, 128);
+    
     await pendown();
     await right(90);
 
     for(var i = 0; i < 40; i++) {
         await font('' + i + 'pt Arial');
-        await filltext('पीको टर्टल');
+        if(i%2 == 0) {
+            await pencolour(255, 128, 128);
+            await filltext('पीको टर्टल');
+        } else {
+            await pencolour(255, 128, 255);
+            await filltext('PicoTurtle');
+        }
         await penup();
         // await back(10);
         await left(90 + 2);
