@@ -23,12 +23,6 @@ back(150)
 pendown()
 dragonCurve(11, 300)
 
-# clear()
-# penup()
-# back(250)
-# pendown()
-# dragonCurve(11, 250)
-
 ### Your code ends here ###
 
 ### Always stop the turtle
