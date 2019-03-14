@@ -16,6 +16,7 @@ def dragonCurveRecursive(order, length, sign):
     right(sign * -90)
     dragonCurveRecursive(order - 1, length * rootHalf, -1)
 
+penup()
 pencolour(255, 0, 0)
 penwidth(1.5)
 back(150)

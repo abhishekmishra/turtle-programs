@@ -29,6 +29,7 @@ let main = async () => {
         }
     }
 
+    await penup();
     await left(90);
     await forward(200);
     await right(90);

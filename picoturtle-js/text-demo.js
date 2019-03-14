@@ -4,6 +4,7 @@ let main = async () => {
     await create_turtle();
     /* Your code goes here */
 
+    await penup();
     await back(250);
     await right(90);
     await forward(200);
