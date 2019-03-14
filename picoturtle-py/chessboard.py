@@ -13,11 +13,13 @@ def square(side):
         forward(side)
         right(90)
 
+penup()
 left(90)
 forward(100)
 right(90)
 forward(-200)
 
+pendown()
 pencolour(165, 42, 42)
 for i in range(4):
     for i in range(4):
