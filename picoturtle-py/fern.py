@@ -1,7 +1,4 @@
 from picoturtle import *
-create_turtle()
-
-### Your code goes here ###
 
 def fern(size, sign):
     if (size < 1):
@@ -26,23 +23,29 @@ def fern(size, sign):
     forward(-size)
     forward(-size)
 
-penup()
-back(200)
 
-right(90)
-back(20)
-pencolour(0, 0, 0)
-font('14pt Arial')
-filltext('Fern')
-forward(20)
-left(90)
-forward(50)
+if __name__ == "__main__":
+    create_turtle()
 
-pencolour(0, 128, 0)
-pendown()
-fern(25, 1)
+    ### Your code goes here ###
 
-### Your code ends here ###
+    penup()
+    back(200)
 
-### Always stop the turtle
-stop()
+    right(90)
+    back(20)
+    pencolour(0, 0, 0)
+    font('14pt Arial')
+    filltext('Fern')
+    forward(20)
+    left(90)
+    forward(50)
+
+    pencolour(0, 128, 0)
+    pendown()
+    fern(20, 1)
+
+    ### Your code ends here ###
+
+    ### Always stop the turtle
+    stop()
