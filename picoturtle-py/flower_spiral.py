@@ -29,8 +29,6 @@ if __name__ == "__main__":
             left(1)
             forward(1)
 
-        # clear()
-
     # Your code ends here #
 
     # Always stop the turtle
