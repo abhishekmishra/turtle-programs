@@ -1,14 +1,10 @@
 from picoturtle import *
 from polystop import *
-import time
 
 def polyroll(side, angle1, angle2):
-    for i in range(20):
+    for i in range(100):
         polystop(side, angle1)
         right(angle2)
-        state()
-        time.sleep(0.5)
-
 
 if __name__ == "__main__":
     # Create the turtle before using
