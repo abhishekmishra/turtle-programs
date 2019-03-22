@@ -28,11 +28,21 @@ let main = async () => {
         await forward(-size);
     }
 
-    await pencolour(0, 128, 0);
     await penup();
     await back(200);
+
+    await right(90);
+    await back(20);
+    await pencolour(200, 200, 0);
+    await font('14pt Arial');
+    await filltext('Fern');
+    await forward(20);
+    await left(90);
+    await forward(50);
+
+    await pencolour(0, 128, 0);
     await pendown();
-    await fern(30, 1);
+    await fern(25, 1);
 
     /* Your code ends here */
 

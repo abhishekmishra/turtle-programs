@@ -27,7 +27,6 @@ let main = async () => {
             await filltext('PicoTurtle');
         }
         await penup();
-        // await back(10);
         await left(90 + 2);
         await forward(i * 1.3);
         await right(90);

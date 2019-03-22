@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
     right(90)
     back(20)
-    pencolour(0, 0, 0)
+    pencolour(200, 200, 0)
     font('14pt Arial')
     filltext('Fern')
     forward(20)
@@ -43,7 +43,7 @@ if __name__ == "__main__":
 
     pencolour(0, 128, 0)
     pendown()
-    fern(20, 1)
+    fern(25, 1)
 
     ### Your code ends here ###
 
