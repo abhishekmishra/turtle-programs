@@ -59,7 +59,7 @@ public class Tunnel
             t.heading(100);
             TurtleState ts = t.state();
 
-            for (double i = 1; i < 50; i+=0.25) {
+            for (double i = 1; i < 50; i+=1.5) {
                 double b = i*8, w = i*8, h = i/2;
                 t.right(90);
                 t.back(b/2);
