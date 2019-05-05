@@ -69,6 +69,12 @@ if __name__ == "__main__":
         forward(35)
         left(80)
 
+    pencolour(200, 100, 0)
+    penwidth(5)
+    setx(265)
+    sety(250)
+
+    stick_figure(100, 50)
     # Your code ends here #
 
     # Always stop the turtle
